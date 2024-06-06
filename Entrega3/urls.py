@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from AppEntrega3.views import curso, listaCurso
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('agregaCurso/<nombre>/<camada>', curso),
+    path('listaCurso/', listaCurso),
 ]
